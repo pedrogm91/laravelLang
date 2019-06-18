@@ -3,7 +3,8 @@ create multilingual translated laravel
 # Laravel 5.8
 
 # Middleware Lang.php
-`
+
+```
 <?php
 
 namespace App\Http\Middleware;
@@ -46,10 +47,11 @@ class Lang
         return $next($request);
     }
 }
-`
+```
 
 # routes Web.php
-`
+
+```
 Route::get('/{locale?}', 'WelcomeController@index')->name('home');
 Route::get('/{locale?}/page/blog', function($locale = 'en'){
     return  session('locale');
@@ -59,10 +61,12 @@ Route::get('locale/{locale}', function($locale){
     session(['locale' => $locale]);
     return redirect()->route('home',[$locale]);
 });
+```
 
-`
+
 # Database migrations
-`
+
+```
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -95,10 +99,12 @@ class CreateLocationsTable extends Migration
         Schema::dropIfExists('locations');
     }
 }
+```
 
-`
+
 # view welcome.blade.php
-`
+
+```
 <div class="content">
     <div class="title m-b-md">
         @lang('messages.welcome',['name' => 'Pedro'])
@@ -118,4 +124,5 @@ class CreateLocationsTable extends Migration
     </center>
     {{ dd(request()) }}
 </div>
-`
+```
+
