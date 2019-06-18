@@ -3,7 +3,8 @@ create multilingual translated laravel
 # Laravel 5.8
 
 # Middleware Lang.php
-`<?php
+`
+<?php
 
 namespace App\Http\Middleware;
 
