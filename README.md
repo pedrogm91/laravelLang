@@ -1,8 +1,8 @@
 # laravelLang
-create multilingual translated laravel
+create **multilingual** translated **laravel**
 # Laravel 5.8
 
-# Middleware Lang.php
+ Middleware Lang.php
 
 ```
 <?php
@@ -49,7 +49,7 @@ class Lang
 }
 ```
 
-# routes Web.php
+ routes Web.php
 
 ```
 Route::get('/{locale?}', 'WelcomeController@index')->name('home');
@@ -64,7 +64,7 @@ Route::get('locale/{locale}', function($locale){
 ```
 
 
-# Database migrations
+ Database migrations
 
 ```
 <?php
@@ -102,7 +102,7 @@ class CreateLocationsTable extends Migration
 ```
 
 
-# view welcome.blade.php
+ view welcome.blade.php
 
 ```
 <div class="content">
